@@ -1,0 +1,22 @@
+<resources>
+    <!-- Nombre de la aplicación -->
+    <string name="app_name">AppCitasMedicas</string>
+
+    <!-- Texto de bienvenida -->
+    <string name="atenci_n_excepcional_n_cerca_de_ti">Atención excepcional\n cerca de ti</string>
+
+    <!-- Texto del botón para hacer cita -->
+    <string name="hacer_cita">Hacer cita</string>
+
+    <!-- Archivo de preferencias compartidas -->
+    <string name="prefs_file">com.example.appcitasmedicas.PREFERENCE_FILE_KEY</string>
+
+    <!-- Texto de los botones para autenticación -->
+    <string name="google_sign_in_button">Sign in with Google</string>
+    <string name="facebook_sign_in_button">Iniciar sesión con Facebook</string>
+
+    <!-- Configuración para Facebook -->
+    <string name="facebook_app_id">1113720870289754</string>
+    <string name="fb_login_protocol_scheme">fb1113720870289754</string>
+    <string name="facebook_client_token">c95d30d4f12e97a1a06f2b30d057fde3</string>
+</resources>
