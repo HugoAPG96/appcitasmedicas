@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppointmentActivity">
+
+    <!-- Contenedor ScrollView con LinearLayout dentro -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registro de Cita Médica"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingBottom="12dp" />
+
+            <!-- Usuario -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Usuario"
+                android:textSize="14sp"
+                android:paddingBottom="4dp" />
+            <TextView
+                android:id="@+id/tvUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F1F1F1"
+                android:padding="6dp"
+                android:text="Nombre de usuario"
+                android:hint="Recuperado del layout anterior" />
+
+            <!-- DNI -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DNI"
+                android:textSize="14sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+            <EditText
+                android:id="@+id/etDNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingresa el DNI"
+                android:inputType="number" />
+
+            <!-- Nombre -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textSize="14sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingresa el nombre"
+                android:inputType="textPersonName" />
+
+            <!-- Apellidos -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apellidos"
+                android:textSize="14sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+            <EditText
+                android:id="@+id/etApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingresa los apellidos"
+                android:inputType="textPersonName" />
+
+            <!-- Teléfono -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teléfono"
+                android:textSize="14sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+            <EditText
+                android:id="@+id/etTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingresa el teléfono"
+                android:inputType="phone" />
+
+            <!-- Email -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="14sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingresa el email"
+                android:inputType="textEmailAddress" />
+
+            <!-- Fecha -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha de la Cita"
+                android:textSize="14sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+            <EditText
+                android:id="@+id/etFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Selecciona la fecha"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none" />
+
+            <!-- Hora -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hora de la Cita"
+                android:textSize="14sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+            <Spinner
+                android:id="@+id/spHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Especialidad -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Especialidad"
+                android:textSize="14sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+            <TextView
+                android:id="@+id/tvEspecialidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F1F1F1"
+                android:padding="6dp"
+                android:text="Especialidad seleccionada"
+                android:hint="Recuperado de la base de datos" />
+
+            <!-- Nombre del Médico -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre del Médico"
+                android:textSize="14sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+            <TextView
+                android:id="@+id/tvNombreMedico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F1F1F1"
+                android:padding="6dp"
+                android:text="Dr. Nombre Apellido"
+                android:hint="Recuperado de la base de datos" />
+
+            <!-- Botones -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:paddingTop="12dp">
+
+                <Button
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guardar"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnCancelar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancelar" />
+            </LinearLayout>
+
+            <!-- Botón para visualizar citas -->
+            <Button
+                android:id="@+id/btnVisualizarCitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Visualizar Citas"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

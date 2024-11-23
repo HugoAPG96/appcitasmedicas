@@ -43,6 +43,11 @@
             android:name=".Activity.MainActivity"
             android:exported="true">
         </activity>
+
+        <!-- Nueva actividad: AppointmentActivity -->
+        <activity
+            android:name=".Activity.AppointmentActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
