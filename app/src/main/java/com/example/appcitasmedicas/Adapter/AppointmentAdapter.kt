@@ -8,8 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.appcitasmedicas.Domain.AppointmentModel
 import com.example.appcitasmedicas.R
 
-class AppointmentAdapter(private val appointmentList: List<AppointmentModel>) :
-    RecyclerView.Adapter<AppointmentAdapter.AppointmentViewHolder>() {
+class AppointmentAdapter(
+    private val appointmentList: List<AppointmentModel>,
+    private val doctorNameMap: Map<String, String> // Recibir el mapa de nombres de médicos con el tipo explícito
+) : RecyclerView.Adapter<AppointmentAdapter.AppointmentViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AppointmentViewHolder {
         val view: View = LayoutInflater.from(parent.context)
@@ -20,10 +22,13 @@ class AppointmentAdapter(private val appointmentList: List<AppointmentModel>) :
     override fun onBindViewHolder(holder: AppointmentViewHolder, position: Int) {
         val appointment: AppointmentModel = appointmentList[position]
 
-        // Usando las propiedades del modelo directamente
-        holder.tvUsuarioDni.text = "Usuario: ${appointment.firstName} ${appointment.lastName} - DNI: ${appointment.dni}"
-        holder.tvMedicoEspecialidad.text = "Médico: ${appointment.firstName} ${appointment.lastName} | Especialidad: ${appointment.specialty}"
-        holder.tvFechaHora.text = "Fecha: ${appointment.date} | Hora: ${appointment.time}"
+        // Usar el mapa para obtener el nombre del médico con el DoctorId convertido a String
+        val doctorName = doctorNameMap[appointment.DoctorId.toString()] ?: "Desconocido"
+
+        // Mostrar los datos de la cita
+        holder.tvUsuarioDni.text = "Nombre: ${appointment.FirstName} ${appointment.LastName} - DNI: ${appointment.DNI}"
+        holder.tvMedicoEspecialidad.text = "Médico: $doctorName | Especialidad: ${appointment.Specialty}"
+        holder.tvFechaHora.text = "Fecha: ${appointment.Date} | Hora: ${appointment.Time}"
     }
 
     override fun getItemCount(): Int {
@@ -36,3 +41,4 @@ class AppointmentAdapter(private val appointmentList: List<AppointmentModel>) :
         var tvFechaHora: TextView = itemView.findViewById(R.id.tvFechaHora)
     }
 }
+

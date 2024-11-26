@@ -46,8 +46,16 @@
 
         <!-- Nueva actividad: AppointmentActivity -->
         <activity
-            android:name=".Activity.AppointmentActivity"
+            android:name=".AppointmentActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Activity.ViewAppointmentActivity"
             android:exported="false" />
     </application>
+
+    <!-- Permisos necesarios para Firebase y la conectividad -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>
