@@ -9,13 +9,30 @@
     android:background="#FFFFFF"
     tools:context=".AuthActivity">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/light_purple_bg_full_corner"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:padding="20dp"
+        android:text="TU MEJOR APP\nDE\n CITAS MÉDICAS"
+        android:textColor="#4B0082"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/authLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/authLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:background="@drawable/auth_layout_background"
+        android:background="@drawable/light_purple_bg_full_corner"
         android:elevation="4dp"
         android:orientation="vertical"
         android:padding="40dp"
